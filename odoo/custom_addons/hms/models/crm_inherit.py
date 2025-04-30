@@ -11,7 +11,7 @@ class ResPartner(models.Model):
     def _check_patient_email(self):
         for partner in self:
             if partner.related_patient_id and partner.email:
-                # Check if this email exists in any patient other than the related one
+          
                 patient = self.env['hms.patient'].search([
                     ('email', '=', partner.email),
                     ('id', '!=', partner.related_patient_id.id)
