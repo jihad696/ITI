@@ -51,7 +51,7 @@ class HmsPatient(models.Model):
         return super(HmsPatient, self).create(vals_list)
 
     def write(self, vals):
-        # Check if state is changed
+       
         if 'state' in vals and vals['state'] != self.state:
             new_state = dict(self._fields['state'].selection).get(vals['state'])
             self.env['hms.patient.log'].create({
@@ -59,7 +59,7 @@ class HmsPatient(models.Model):
                 'description': f'State changed to {new_state}'
             })
 
-        # Email validation
+       
         if 'email' in vals and vals['email']:
             self._validate_email(vals['email'])
 
