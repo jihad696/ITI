@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Doctor Form View -->
+
     <record id="view_hms_doctor_form" model="ir.ui.view">
         <field name="name">hms.doctor.form</field>
         <field name="model">hms.doctor</field>
@@ -24,7 +24,6 @@
         </field>
     </record>
 
-    <!-- Doctor List View -->
     <record id="view_hms_doctor_list" model="ir.ui.view">
         <field name="name">hms.doctor.list</field>
         <field name="model">hms.doctor</field>
@@ -37,7 +36,6 @@
         </field>
     </record>
 
-    <!-- Doctor Action -->
     <record id="action_hms_doctor" model="ir.actions.act_window">
         <field name="name">Doctors</field>
         <field name="type">ir.actions.act_window</field>
